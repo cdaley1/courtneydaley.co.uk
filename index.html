@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <link rel="icon" type="image/png" href="Images/favicon.png">
+    </head>
+
+    <body>
+		<div class="container">
+    	<header>
+        	<div class="logo">CD</div>
+				<nav class="active">
+	        		<ul>
+		        		<li><a href="#">Home</a></li>
+		        		<li><a href="#">About</a></li>
+		     			<li><a href="#">CV</a></li>
+	      			</ul>
+        	</nav>
+
+	        <div class="menu-toggle">
+	        	<label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+	        </div>
+        </header>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.menu-toggle').click(function(){
+					$('nav').toggleClass('active')
+				})
+			})
+				</script>
+        
+
+        	<div class="page-title">
+				<img src="Images/cdpsg2.png" alt="">
+			</div>
+
+			<main class="main-content">
+					<ul class="schedule-list">
+			          <li>
+			            <h2 class="talk-title">CSS Grid Changes Everything (About Web Layouts)</h2>
+			            <p class="talk-speaker">Morten Rand-Hendriksen</p>
+			            <p class="talk-time">9:00 am</p>
+			          </li>
+			          <li>
+			            <h2 class="talk-title">Using WordPress for Good</h2>
+			            <p class="talk-speaker">Sasha Endoh</p>
+			            <p class="talk-time">10:00 am</p>
+			          </li>
+			          <li>
+			            <h2 class="talk-title">Accessibility in the Age of the Headless CMS</h2>
+			            <p class="talk-speaker">Rian Rietveld</p>
+			            <p class="talk-time">11:00 am</p>
+			          </li>
+			      	</ul>
+				</main>
+
+				<aside class="sidebar">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim distinctio obcaecati, quis ipsa recusandae ipsam voluptate laudantium, sunt, iusto atque harum eius aliquid illum. Illum labore perferendis provident beatae.</p>
+				</aside>
+
+				<footer class="footer">
+		      		Design by Alexis Chandi Daley
+				</footer>
+        	
+        </div>
+        
+    </body>
+</html>

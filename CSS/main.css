@@ -27,6 +27,14 @@ body {
 		justify-content: center;
 		align-items: center;
 	}
+	
+	.cdpsg2 {
+		display: none;
+	}
+
+	.big3 {
+		display: block;
+	}
 
 	.main-content {
 		height: 100vh;
@@ -131,7 +139,7 @@ label {
 
 /* Ipad ============================== */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1150px) {
 	.container {
 		display: grid;
 		width: 90%;
@@ -156,6 +164,15 @@ label {
 		display: flex;
 		margin-top: 0;
 		grid-area: title;
+	}
+	
+
+	.cdpsg2 {
+		display: block;
+	}
+
+	.big3 {
+		display: none;
 	}
 
 	.main-content {
@@ -196,6 +213,14 @@ label {
 		display: flex;
 		margin-top: 0;
 		grid-area: title;
+	}
+
+	.big3 {
+		display: none;
+	}
+
+	.cdpsg2 {
+		display: block;
 	}
 
 	.main-content {
@@ -244,6 +269,7 @@ label {
 		
 		display: block;
 		text-align: center;
+		padding-top: 45%;
 	}
 
 	header nav ul li a {

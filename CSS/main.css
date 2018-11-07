@@ -50,10 +50,10 @@ body {
 
 	.footer {
 		grid-area: footer;
-		background: #8241f4;
+		background: #262626;
 		display: flex;
 		justify-content: center;
-		padding: 1.5em;
+		padding: 0.5em;
 	}
 
 /* ========== Navigation ============ */
@@ -231,7 +231,7 @@ label {
 		opacity: 0.9;
 		top: 50px;
 		left: -100%;
-		transition: 0.5s;
+		transition: 0.5s ease-in;
 		
 	}
 

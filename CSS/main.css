@@ -226,7 +226,6 @@ label {
 	}
 
 	.page-title {
-		overflow: hidden;
 		height: 100vh;
 		display: flex;
 		position: relative;
@@ -250,7 +249,7 @@ label {
 
 	.dunk2 {
 		padding-top: 60px;
-		transform: rotate(10deg) translate(50px, 7px) scale(1.2);
+		transform: rotate(10deg) translate(50px, 7px) scale(1.1);
 	}
 
 	.main-content {

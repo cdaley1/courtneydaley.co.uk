@@ -21,7 +21,7 @@ body {
 	.page-title {
 		height: 100vh;
 		grid-area: title;
-		background: #f48f41;
+		background: #fff;
 		margin-top: 0;
 		display: flex;
 		justify-content: center;
@@ -29,11 +29,16 @@ body {
 	}
 	
 	.cdpsg2 {
-		display: none;
+		padding-top: 60px;
 	}
 
-	.big3 {
+	.C14 {
 		display: block;
+		padding: 0 50px 0 50px;
+	}
+
+	.dunk2 {
+		padding-top: 60px;
 	}
 
 	.main-content {
@@ -168,11 +173,18 @@ label {
 	
 
 	.cdpsg2 {
+		display: none;
+		padding-top: 170px;
+		
+	}
+
+	.dunk2 {
 		display: block;
 	}
 
-	.big3 {
-		display: none;
+	.C14 {
+		display: block;
+		padding: 0 50px 0 50px;
 	}
 
 	.main-content {
@@ -193,7 +205,7 @@ label {
 
 /* Iphone ============================== */
 
-@media screen and (max-width: 513px) {
+@media screen and (max-width: 685px) {
 
 	.container {
 		display: grid;
@@ -215,12 +227,18 @@ label {
 		grid-area: title;
 	}
 
-	.big3 {
+
+	.cdpsg2 {
 		display: none;
 	}
 
-	.cdpsg2 {
+	.C14 {
 		display: block;
+		padding-right: 30px;
+	}
+
+	.dunk2 {
+		padding-top: 60px;
 	}
 
 	.main-content {

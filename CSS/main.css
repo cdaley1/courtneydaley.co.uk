@@ -210,6 +210,8 @@ label {
 	.container {
 		display: grid;
 		width: 100%;
+		padding: 0;
+		margin: 0;
 		grid-template-columns: 2fr;
 				grid-template-rows: auto auto auto auto auto;
 				grid-template-areas:
@@ -225,8 +227,12 @@ label {
 		display: flex;
 		margin-top: 0;
 		grid-area: title;
+		z-index: 2;
 	}
 
+	.page-title img {
+		position: absolute;
+	}
 
 	.cdpsg2 {
 		display: none;
@@ -234,11 +240,12 @@ label {
 
 	.C14 {
 		display: block;
-		padding-right: 30px;
+		left: 0;
 	}
 
 	.dunk2 {
 		padding-top: 60px;
+		transform: rotate(10deg) translate(50px, 7px) scale(1.2);
 	}
 
 	.main-content {
@@ -259,6 +266,7 @@ label {
 		grid-area: header;
 		position: fixed;
 		padding: 0 20px;
+		z-index: 3;
 	}
 
 	.menu-toggle {
@@ -266,7 +274,6 @@ label {
 	}
 
 	header nav {
-		
 		position: absolute;
 		width: 100%;
 		height: calc(100vh - 50px);
@@ -275,24 +282,16 @@ label {
 		top: 50px;
 		left: -100%;
 		transition: 0.5s ease-in;
-		
 	}
 
 	header nav.active {
-		
 		left: 0;
 	}
 
 	header nav ul {
-		
 		display: block;
 		text-align: center;
 		padding-top: 45%;
-	}
-
-	header nav ul li a {
-		
-		
 	}
 
 }

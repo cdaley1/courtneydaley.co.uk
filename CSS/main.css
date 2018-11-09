@@ -31,6 +31,7 @@ body {
 	
 	.cdpsg2 {
 		padding-top: 60px;
+		display: none;
 	}
 
 	.C14 {
@@ -45,7 +46,7 @@ body {
 	.main-content {
 		height: 100vh;
 		grid-area: main;
-		background: #42f48f;
+		background: #fff;
 		margin-top: 0;
 		padding: 3em;
 	}
@@ -215,6 +216,8 @@ label {
 		width: 100%;
 		padding: 0;
 		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
 		grid-template-columns: 1fr;
 				grid-template-rows: auto auto auto auto auto;
 				grid-template-areas:
@@ -255,6 +258,7 @@ label {
 	.main-content {
 		height: 100vh;
 		grid-area: main;
+		padding-top: 70px;
 	}
 
 	.sidebar {
@@ -285,7 +289,7 @@ label {
 		opacity: 0.9;
 		top: 50px;
 		left: -100%;
-		transition: 0.5s ease-in;
+		transition: 0.5s;
 	}
 
 	header nav.active {

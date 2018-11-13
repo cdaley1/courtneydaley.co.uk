@@ -1,3 +1,4 @@
+
 body {
 	margin: 0;
 	padding: 0;
@@ -7,86 +8,35 @@ body {
 .container {
 		overflow: hidden;
 		display: grid;
-		width: 90%;
-		margin: 0 auto;
-		box-shadow: 0px 0px 25px black;
-		grid-template-columns: 2fr 2fr;
-				grid-template-rows: auto auto auto auto;
+		width: 100%;
+		padding: 0;
+		margin: auto;
+		align-items: center;
+		justify-content: center;
+		grid-template-columns: 2fr 1fr;
+				grid-template-rows: auto auto auto auto auto;
 				grid-template-areas:
 					"header header"
-					"title title"
-					"main sidebar"
+					"title socials"
+					"main main"
 					"footer footer";
 	}
 
-	.page-title {
-		height: 100vh;
-		grid-area: title;
-		background: #fff;
-		margin-top: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	.cdpsg2 {
-		padding-top: 60px;
-		display: none;
-	}
-
-	.C14 {
-		display: block;
-		padding: 0 50px 0 50px;
-	}
-
-	.dunk2 {
-		padding-top: 60px;
-	}
-
-	.main-content {
-		height: 100vh;
-		grid-area: main;
-		background: #fff;
-		margin-top: 0;
-		padding: 3em;
-	}
-
-	.main-content ul {
-		list-style: none;
-	}
-
-	.sidebar {
-		height: 100vh;
-		grid-area: sidebar;
-		display: flex;
-		background: #42F;
-		padding: 3em;
-	}
-
-	.footer {
-		grid-area: footer;
-		background: #262626;
-		display: flex;
-		justify-content: center;
-		padding: 0.5em;
-	}
-
-/* ========== Navigation ============ */
+/* ======== Navigation ========== */	
 
 header {
-
 	grid-area: header;
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 0 100px;
+	padding: 0 20px;
 	background: #262626;
 	width: 100%;
 	box-sizing: border-box;
+	z-index: 3;
 }
 
 header .logo {
-	
 	color: #FFF;
 	height: 50px;
 	line-height: 50px;
@@ -94,27 +44,50 @@ header .logo {
 	float: left;
 	font-weight: bold;
 }
- 
-header nav {
-	
+
+.menu-toggle {
+	display: block;
+	color: #FFF;
 	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+label {
+	cursor: pointer;
+}
+
+header nav {
+	float: right;
+	position: absolute;
+	width: 100%;
+	height: calc(100vh - 50px);
+	background: #333;
+	opacity: 0.9;
+	top: 50px;
+	left: -100%;
+	transition: 0.5s;
+}
+
+header nav.active {
+	left: 0;
 }
 
 header nav ul {
-
 	margin: 0;
-	padding-top: 0;
 	padding-left: 0;
-	display: flex;
+	padding-top: 0;
+	display: block;
+	text-align: center;
+	padding-top: 45%;
 }
 
 header nav ul li {
-
 	list-style: none;	
 }
 
 header nav ul li a {
-	
 	height: 50px;
 	line-height: 50px;
 	padding: 0 20px;
@@ -124,36 +97,75 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-	
 	color: #FFF;
 	background: #2196f3;
 }
 
-.menu-toggle {
-	
-	color: #FFF;
-	float: right;
-	line-height: 50px;
-	font-size: 24px;
-	cursor: pointer;
-	display: none;
+/* ========== Socials =========== */
+
+.socials {
+	grid-area: socials;
+	background: #fff009;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-label {
-	cursor: pointer;
+.socials ul {
+	list-style: none;
+	display: block;
+}
+
+.socials ul li {
+	padding-right: 30px;
+}
+
+
+/* ========== Page Title =========== */
+
+.page-title {
+	background: #fff;
+	height: 100vh;
+	display: flex;
+	position: relative;
+	margin-top: 0;
+	grid-area: title;
+	z-index: 2;
+	justify-content: center;
+	align-items: center;
+	}
+
+.page-title img {
+	position: absolute;
+}
+
+.C14 {
+	display: block;
+	left: 0;
+}
+
+.dunk2 {
+	padding-top: 60px;
+	transform: rotate(10deg) translate(50px, 7px) scale(1.1);
 }
 
 /* Shadow ============================== */
 
+.box {
+	display: flex;
+	justify-content: center;
+}
+
 .shadow {
 	position: relative;
 	display: flex;
-	margin: 200px 375px;
-	width: 400px;
-	height: 250px;
-	background: linear-gradient(0deg,#000,#262626);
 	text-align: center;
 	align-items: center;
+	margin: 200px 375px;
+	width: 300px;
+	height: 250px;
+	background: linear-gradient(0deg,#000,#262626);
+
 }
 
 .uni {
@@ -196,165 +208,16 @@ label {
 	}
 }
 
-/* Ipad ============================== */
+/* ========= Footer ========= */
 
-@media screen and (max-width: 1150px) {
-	.container {
-		overflow: hidden;
-		display: grid;
-		width: 100%;
-		margin: 0 auto;
-		box-shadow: 0px 0px 25px black;
-		grid-template-columns: 2fr 2fr;
-				grid-template-rows: auto auto auto auto;
-				grid-template-areas:
-					"header header"
-					"title title"
-					"main sidebar"
-					"footer footer";
-	}
-
-	header {
-		position: relative;
-		grid-area: header;
-	}
-
-	.page-title {
-		height: 100vh;
-		display: flex;
-		margin-top: 0;
-		grid-area: title;
-	}
-	
-
-	.cdpsg2 {
-		display: none;
-		padding-top: 170px;
-		
-	}
-
-	.dunk2 {
-		display: block;
-	}
-
-	.C14 {
-		display: block;
-		padding: 0 50px 0 50px;
-	}
-
-	.main-content {
-		height: 100vh;
-		grid-area: main;
-		
-	}
-
-	.sidebar {
-		height: 100vh;
-		grid-area: sidebar;
-	}
-
-	.footer {
+.footer {
 		grid-area: footer;
-	}
-}
-
-/* Iphone ============================== */
-
-@media screen and (max-width: 685px) {
-
-	.container {
-		overflow: hidden;
-		display: grid;
-		width: 100%;
-		padding: 0;
-		margin: 0 auto;
-		align-items: center;
+		background: #262626;
+		display: flex;
 		justify-content: center;
-		grid-template-columns: 1fr;
-				grid-template-rows: auto auto auto auto auto;
-				grid-template-areas:
-					"header"
-					"title"
-					"main"
-					"sidebar"
-					"footer";
+		padding: 0.5em;
 	}
 
-	.page-title {
-		height: 100vh;
-		display: flex;
-		position: relative;
-		margin-top: 0;
-		grid-area: title;
-		z-index: 2;
-	}
-
-	.page-title img {
-		position: absolute;
-	}
-
-	.cdpsg2 {
-		display: none;
-	}
-
-	.C14 {
-		display: block;
-		left: 0;
-	}
-
-	.dunk2 {
-		padding-top: 60px;
-		transform: rotate(10deg) translate(50px, 7px) scale(1.1);
-	}
-
-	.main-content {
-		height: 100vh;
-		grid-area: main;
-		padding-top: 70px;
-	}
-
-	.sidebar {
-		height: 100vh;
-		grid-area: sidebar;
-	}
-
-	.footer {
-		grid-area: footer;
-	}
-	
-	header {
-		grid-area: header;
-		position: fixed;
-		padding: 0 20px;
-		z-index: 3;
-	}
-
-	.menu-toggle {
-		display: block;
-	}
-
-	header nav {
-		position: absolute;
-		width: 100%;
-		height: calc(100vh - 50px);
-		background: #333;
-		opacity: 0.9;
-		top: 50px;
-		left: -100%;
-		transition: 0.5s;
-	}
-
-	header nav.active {
-		left: 0;
-	}
-
-	header nav ul {
-		display: block;
-		text-align: center;
-		padding-top: 45%;
-	}
-
-}
 
 
 

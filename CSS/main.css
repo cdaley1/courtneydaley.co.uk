@@ -114,14 +114,17 @@ header nav ul li a:hover {
 .socials ul {
 	list-style: none;
 	display: block;
+	padding-left: 60px;
 }
 
 .socials ul li {
 	padding-right: 30px;
+	
 }
 
 .socials ul li a {
 	text-decoration: none;
+	color: black;
 }
 
 
